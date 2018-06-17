@@ -1,3 +1,30 @@
+## INSTALL
+* [如何在LINUX（CENTOS7）下编译搭建XMR门罗币挖矿程序](https://www.jianshu.com/p/fe7214d4e5d4)
+* [Centos下挖XMR门罗币的详细教程](http://www.3000.cx/detail.php?id=6840)
+
+* 配置环境
+
+```
+# 安装显卡驱动...
+# 安装高版本的cmake和gcc，g++
+sudo yum install cmake3 devtoolset-4-gcc devtoolset-4-gcc-c++
+# 切换开发工具版本
+scl enable devtoolset-4 bash
+```
+
+* 编译安装
+```
+cmake3 .. -DOpenCL_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF
+make install -j4
+```
+
+* 使用
+```
+cd ../bin
+./xmr
+```
+
+
 ###### fireice-uk's and psychocrypt's
 # XMR-Stak - Monero/Aeon All-in-One Mining Software
 
